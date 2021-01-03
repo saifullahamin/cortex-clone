@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       height: 500,
     },
     [theme.breakpoints.down("md")]: {
-      height: 400,
+      height: 350,
     },
   },
   div1: {
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
       maxWidth: 450,
-        // paddingBottom: 30,
+      // paddingBottom: 30,
       padding: 10,
     },
   },
@@ -94,12 +94,12 @@ export default function CenteredGrid() {
         direction="row-reverse"
         className={classes.parentGrid}
       >
-        <Grid item sm={12} md={6} className={classes.grid2}>
+        <Grid item xs={12} sm={12} md={6} className={classes.grid2}>
           <div className={classes.div2}>
             <img src={img1} alt="d" className={classes.image} />
           </div>
         </Grid>
-        <Grid item sm={12} md={6} className={classes.grid1}>
+        <Grid item xs={12} sm={12} md={6} className={classes.grid1}>
           <div className={classes.div1}>
             <h1 className={classes.heading1}>CORTEX</h1>
             <h2 className={classes.heading2}>COPYWRITER</h2>
