@@ -74,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
       maxWidth: 450,
-      //   paddingBottom: 30,
-      padding: 0,
+        // paddingBottom: 30,
+      padding: 10,
     },
   },
   parentGrid: {
