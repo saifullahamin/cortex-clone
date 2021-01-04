@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     textTransform: "none",
     fontSize: 18,
+    "&:hover": {
+      background: "none",
+    },
   },
   appBar: {
     backgroundImage:
@@ -32,7 +35,11 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="sticky" className={classes.appBar}>
         <Toolbar>
-          <Button className={classes.switchBtn} color="inherit">
+          <Button
+            className={classes.switchBtn}
+            color="inherit"
+            disableRipple={true}
+          >
             Switch experience <ArrowDropDownIcon />
           </Button>
           <IconButton

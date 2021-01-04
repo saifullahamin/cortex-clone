@@ -6,6 +6,7 @@ import services2 from "../images/services2.svg";
 import services3 from "../images/services3.svg";
 import { fadeIn } from "@wellyshen/use-web-animations";
 import useWebAnimations from "@wellyshen/use-web-animations";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(30deg,rgba(206,2,189,1) 0%,   rgba(75,6,193,1) 100%);",
     color: "white",
+    [theme.breakpoints.down("md")]: {
+      paddingBottom: 50,
+    },
   },
   services: {
     [theme.breakpoints.up("md")]: {
@@ -50,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     [theme.breakpoints.down("md")]: {
-      margin: "100px auto",
+      marginTop: "100px",
       height: 250,
     },
   },
@@ -96,12 +100,9 @@ export default function CenteredGrid() {
           md={6}
           className={`${classes.gridLeft} ${classes.img}`}
         >
-          <img
-            ref={InRef1}
-            src={services1}
-            alt="services"
-            className={classes.services}
-          />
+          <Fade left>
+            <img src={services1} alt="services" className={classes.services} />
+          </Fade>
         </Grid>
         <Grid item xs={12} md={6} className={classes.gridRight}>
           <div className={classes.services}>
@@ -134,12 +135,9 @@ export default function CenteredGrid() {
           md={6}
           className={`${classes.gridRight} ${classes.img}`}
         >
-          <img
-            ref={InRef2}
-            src={services2}
-            alt="services"
-            className={classes.services}
-          />
+          <Fade right>
+            <img src={services2} alt="services" className={classes.services} />
+          </Fade>
         </Grid>
         <Grid item xs={12} md={6} className={classes.gridLeft}>
           <div className={classes.services}>
@@ -172,12 +170,9 @@ export default function CenteredGrid() {
           md={6}
           className={`${classes.gridLeft} ${classes.img}`}
         >
-          <img
-            ref={InRef3}
-            src={services3}
-            alt="services"
-            className={classes.services}
-          />
+          <Fade left>
+            <img src={services3} alt="services" className={classes.services} />
+          </Fade>
         </Grid>
         <Grid item xs={12} md={6} className={classes.gridRight}>
           <div className={classes.services}>
