@@ -35,14 +35,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "flex-start",
-      maxWidth: "100%",
       padding: "10px",
       paddingRight: 30,
     },
     [theme.breakpoints.down("md")]: {
       display: "flex",
       justifyContent: "center",
-      maxWidth: "100%",
       padding: "10px",
     },
   },
@@ -54,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       transform: "scale(1.02)",
       cursor: "pointer",
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: 500,
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: 400,
     },
   },
   images: {
@@ -76,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     width: "70%",
     backgroundColor: "rgb(242, 242, 242)",
-    padding: "10px 0px 30px 30px",
+    padding: "10px 10px 30px 30px",
   },
   name: {
     fontSize: 19,
@@ -215,12 +219,12 @@ export default function CenteredGrid() {
               <img ref={ref1} src={r1} alt="review" className={classes.img} />
             </div>
             <div className={classes.text}>
-              <p className={classes.name}>Craig Erskine-Smith</p>
-              <p className={classes.desig}>CEO – Erskine Oral Care</p>
+              <p className={classes.name}> Karl Van Lieshout</p>
+              <p className={classes.desig}>Owner & Operator – Ausbeds</p>
               <div className={classes.lines}>
-                <div style={{ marginTop: 15 }}>"..wonderful ideas"</div>
-                <div style={{ marginTop: 15 }}>"..perfect tagline"</div>
-                <div style={{ marginTop: 15 }}>"..excellent wireframes"</div>
+                <div style={{ marginTop: 15 }}>"..innovative"</div>
+                <div style={{ marginTop: 15 }}>"..seamless UX"</div>
+                <div style={{ marginTop: 15 }}>"..more online sales"</div>
               </div>
             </div>
           </div>
@@ -231,12 +235,14 @@ export default function CenteredGrid() {
               <img ref={ref2} src={r2} alt="review" className={classes.img} />
             </div>
             <div className={classes.text}>
-              <p className={classes.name}>Craig Erskine-Smith</p>
-              <p className={classes.desig}>CEO – Erskine Oral Care</p>
+              <p className={classes.name}>Rosawin Siri</p>
+              <p className={classes.desig}>
+                Digital Marketing Manager – 4mation Technologies
+              </p>
               <div className={classes.lines}>
-                <div style={{ marginTop: 15 }}>"..wonderful ideas"</div>
-                <div style={{ marginTop: 15 }}>"..perfect tagline"</div>
-                <div style={{ marginTop: 15 }}>"..excellent wireframes"</div>
+                <div style={{ marginTop: 15 }}>"..flexible"</div>
+                <div style={{ marginTop: 15 }}>"..nailed voice & tone"</div>
+                <div style={{ marginTop: 15 }}>"..keep on retainer"</div>
               </div>
             </div>
           </div>
@@ -263,12 +269,14 @@ export default function CenteredGrid() {
               <img ref={ref4} src={r4} alt="review" className={classes.img} />
             </div>
             <div className={classes.text}>
-              <p className={classes.name}>Craig Erskine-Smith</p>
-              <p className={classes.desig}>CEO – Erskine Oral Care</p>
+              <p className={classes.name}>Liam Key</p>
+              <p className={classes.desig}>
+                Creative Director – Imagination Pioneers Studios
+              </p>
               <div className={classes.lines}>
-                <div style={{ marginTop: 15 }}>"..wonderful ideas"</div>
-                <div style={{ marginTop: 15 }}>"..perfect tagline"</div>
-                <div style={{ marginTop: 15 }}>"..excellent wireframes"</div>
+                <div style={{ marginTop: 15 }}>"..love his passion"</div>
+                <div style={{ marginTop: 15 }}>"..heaps of depth"</div>
+                <div style={{ marginTop: 15 }}>"..speaks to my brand"</div>
               </div>
             </div>
           </div>
@@ -279,30 +287,28 @@ export default function CenteredGrid() {
               <img ref={ref5} src={r5} alt="review" className={classes.img} />
             </div>
             <div className={classes.text}>
-              <p className={classes.name}>Craig Erskine-Smith</p>
-              <p className={classes.desig}>CEO – Erskine Oral Care</p>
+              <p className={classes.name}>Eoin Mullins</p>
+              <p className={classes.desig}>Director – Corbel Technologies</p>
               <div className={classes.lines}>
-                <div style={{ marginTop: 15 }}>"..wonderful ideas"</div>
-                <div style={{ marginTop: 15 }}>"..perfect tagline"</div>
-                <div style={{ marginTop: 15 }}>"..excellent wireframes"</div>
+                <div style={{ marginTop: 15 }}>"..beautiful copy"</div>
+                <div style={{ marginTop: 15 }}>"..psychology edge"</div>
+                <div style={{ marginTop: 15 }}>"..emotional currents"</div>
               </div>
             </div>
           </div>
         </Grid>
         <Grid item xs={12} md={6} className={classes.gridY}>
           <div className={classes.main}>
-            <div className={classes.main}>
-              <div className={classes.images}>
-                <img ref={ref6} src={r6} alt="review" className={classes.img} />
-              </div>
-              <div className={classes.text}>
-                <p className={classes.name}>Craig Erskine-Smith</p>
-                <p className={classes.desig}>CEO – Erskine Oral Care</p>
-                <div className={classes.lines}>
-                  <div style={{ marginTop: 15 }}>"..wonderful ideas"</div>
-                  <div style={{ marginTop: 15 }}>"..perfect tagline"</div>
-                  <div style={{ marginTop: 15 }}>"..excellent wireframes"</div>
-                </div>
+            <div className={classes.images}>
+              <img ref={ref6} src={r6} alt="review" className={classes.img} />
+            </div>
+            <div className={classes.text}>
+              <p className={classes.name}> Adrian Rodriguez Soto</p>
+              <p className={classes.desig}>eCommerce Manager – EUX Agency</p>
+              <div className={classes.lines}>
+                <div style={{ marginTop: 15 }}>"..superior intellect"</div>
+                <div style={{ marginTop: 15 }}>"..deep psychology"</div>
+                <div style={{ marginTop: 15 }}>"..doubled conversions"</div>
               </div>
             </div>
           </div>
