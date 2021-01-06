@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       background: "none",
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16,
+    }
   },
   appBar: {
     backgroundImage:

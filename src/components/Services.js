@@ -18,59 +18,68 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 50,
     },
   },
-  services: {
-    [theme.breakpoints.up("md")]: {
-      width: 700,
-      height: 500,
-    },
+  text: {
+    width: "80%",
     [theme.breakpoints.down("md")]: {
-      width: 400,
+      width: "70%",
     },
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-      width: "90%",
-    },
-  },
-  gridLeft: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      justifyContent: "flex-end",
-      padding: "100px 50px",
-    },
-    [theme.breakpoints.down("md")]: {
-      display: "flex",
-      justifyContent: "center",
-    },
-  },
-  gridRight: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      justifyContent: "flex-start",
-      padding: "100px 50px",
-    },
-    [theme.breakpoints.down("md")]: {
-      display: "flex",
-      justifyContent: "center",
+      width: "85%",
     },
   },
   img: {
+    margin: "auto",
+    width: "80%",
     [theme.breakpoints.down("md")]: {
-      marginTop: "100px",
-      height: 250,
+      width: "50%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "60%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "90%",
+    },
+  },
+
+  gridLeft: {
+    display: "flex",
+    justifyContent: "flex-end",
+    padding: "100px 50px",
+
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      justifyContent: "center",
+      padding: 0,
+      marginTop: 50,
+    },
+  },
+  gridRight: {
+    display: "flex",
+    justifyContent: "flex-start",
+    padding: "100px 50px",
+
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      justifyContent: "center",
+      padding: 0,
+      marginTop: 50,
     },
   },
   hg1: {
     fontSize: 55,
     fontWeight: 400,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 35,
+      marginTop: -15,
+    },
   },
   para: {
-    [theme.breakpoints.up("sm")]: {
-      fontSize: 20,
-      fontWeight: 200,
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 17,
-      fontWeight: 200,
+    fontSize: 20,
+    fontWeight: 200,
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15.5,
+      fontWeight: 100,
     },
   },
   listItem: {
@@ -79,6 +88,18 @@ const useStyles = makeStyles((theme) => ({
     float: "left",
     paddingTop: "25px",
     paddingRight: "50px",
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 13,
+      padding: 2,
+      textAlign: "left",
+    },
+  },
+  list: {
+    [theme.breakpoints.down("xs")]: {
+      display: "inline-grid",
+      marginTop: -7,
+    },
   },
 }));
 
@@ -95,18 +116,15 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={0}>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className={`${classes.gridLeft} ${classes.img}`}
-        >
-          <Fade left>
-            <img src={services1} alt="services" className={classes.services} />
-          </Fade>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridLeft}>
+          <div className={classes.img}>
+            <Fade left>
+              <img src={services1} alt="services" />
+            </Fade>
+          </div>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.gridRight}>
-          <div className={classes.services}>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridRight}>
+          <div className={classes.text}>
             <h1 className={classes.hg1}>UX Writing</h1>
             <p className={classes.para}>
               I develop clear and useful text in product interfaces to help
@@ -115,7 +133,7 @@ export default function CenteredGrid() {
               on-screen help systems, user onboarding and in-app messages to
               push notifications and tooltips.
             </p>
-            <ul>
+            <ul className={classes.list}>
               <li className={classes.listItem}>Microcopy</li>
               <li className={classes.listItem}>Taxonomy & Labeling</li>
               <li className={classes.listItem}>Chatbots</li>
@@ -130,18 +148,15 @@ export default function CenteredGrid() {
       </Grid>
 
       <Grid container spacing={0} direction="row-reverse">
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className={`${classes.gridRight} ${classes.img}`}
-        >
-          <Fade right>
-            <img src={services2} alt="services" className={classes.services} />
-          </Fade>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridRight}>
+          <div className={classes.img}>
+            <Fade right>
+              <img src={services2} alt="services" />
+            </Fade>
+          </div>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.gridLeft}>
-          <div className={classes.services}>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridLeft}>
+          <div className={classes.text}>
             <h1 className={classes.hg1}>Website Copywriting</h1>
             <p className={classes.para}>
               Your website is a dialogue with your audience. I capture the
@@ -151,7 +166,7 @@ export default function CenteredGrid() {
               every step of the way from discovery, to consideration, to
               conversion.
             </p>
-            <ul>
+            <ul className={classes.list}>
               <li className={classes.listItem}>Information Architecture</li>
               <li className={classes.listItem}>Wireframes</li>
               <li className={classes.listItem}>Competitor Analysis</li>
@@ -165,18 +180,15 @@ export default function CenteredGrid() {
         </Grid>
       </Grid>
       <Grid container spacing={0}>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className={`${classes.gridLeft} ${classes.img}`}
-        >
-          <Fade left>
-            <img src={services3} alt="services" className={classes.services} />
-          </Fade>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridLeft}>
+          <div className={classes.img}>
+            <Fade left>
+              <img src={services3} alt="services" />
+            </Fade>
+          </div>
         </Grid>
-        <Grid item xs={12} md={6} className={classes.gridRight}>
-          <div className={classes.services}>
+        <Grid item xs={12} sm={12} md={12} lg={6} className={classes.gridRight}>
+          <div className={classes.text}>
             <h1 className={classes.hg1}>Content Writing</h1>
             <p className={classes.para}>
               Give your business a competitive edge with powerful content that
@@ -185,7 +197,7 @@ export default function CenteredGrid() {
               articles, eDMs, and case studies will help you implement a plan
               that maximizes your business’s online exposure.
             </p>
-            <ul>
+            <ul className={classes.list}>
               <li className={classes.listItem}> Headlines & Taglines</li>
               <li className={classes.listItem}>Content Strategy</li>
               <li className={classes.listItem}>Blogs & Articles</li>

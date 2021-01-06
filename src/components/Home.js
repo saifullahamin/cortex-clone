@@ -23,10 +23,8 @@ const useStyles = makeStyles((theme) => ({
   grid1: {
     display: "flex",
 
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: 50,
-      justifyContent: "flex-end",
-    },
+    paddingTop: 50,
+    justifyContent: "flex-end",
 
     [theme.breakpoints.down("sm")]: {
       paddingTop: 0,
@@ -36,10 +34,9 @@ const useStyles = makeStyles((theme) => ({
   grid2: {
     display: "flex",
 
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: 100,
-      justifyContent: "flex-start",
-    },
+    paddingTop: 100,
+    justifyContent: "flex-start",
+
     [theme.breakpoints.down("sm")]: {
       paddingTop: 20,
       justifyContent: "center",
@@ -50,7 +47,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     marginBottom: 0,
     marginTop: 0,
-    width: "100%",
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 65,
+    },
   },
   heading2: {
     fontSize: 60,
@@ -58,35 +58,43 @@ const useStyles = makeStyles((theme) => ({
     marginTop: -25,
     marginBottom: 0,
     width: "100%",
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 38.5,
+      marginTop: -20,
+    },
   },
   p1: {
-    [theme.breakpoints.up("sm")]: {
-      fontSize: 25,
-      fontWeight: 200,
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 18,
-      fontWeight: 200,
+    fontSize: 25,
+    fontWeight: 200,
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 16,
+      margin: "auto",
+      width: "85%",
+      marginTop: 15,
     },
   },
   div2: {
     position: "relative",
     width: "100%",
 
-    [theme.breakpoints.up("md")]: {
-      height: 500,
-    },
+    height: 500,
     [theme.breakpoints.down("md")]: {
       height: 400,
     },
     [theme.breakpoints.down("sm")]: {
       height: 300,
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: -50,
     },
   },
   image: {
-    [theme.breakpoints.up("md")]: {
-      height: 500,
-    },
+    height: 500,
+    position: "absolute",
+    zIndex: 0,
+
     [theme.breakpoints.down("md")]: {
       height: 400,
     },
@@ -94,13 +102,17 @@ const useStyles = makeStyles((theme) => ({
       height: 300,
       width: "100%",
     },
-    position: "absolute",
-    zIndex: 1,
+    [theme.breakpoints.down("xs")]: {
+      height: 250,
+      width: "100%",
+    },
   },
   image2: {
-    [theme.breakpoints.up("md")]: {
-      height: 500,
-    },
+    height: 500,
+    position: "absolute",
+    zIndex: 1,
+    opacity: 0,
+
     [theme.breakpoints.down("md")]: {
       height: 400,
     },
@@ -108,14 +120,16 @@ const useStyles = makeStyles((theme) => ({
       height: 300,
       width: "100%",
     },
-    position: "absolute",
-    zIndex: 2,
-    opacity: 0,
+    [theme.breakpoints.down("xs")]: {
+      height: 250,
+      width: "100%",
+    },
   },
   image3: {
-    [theme.breakpoints.up("md")]: {
-      height: 500,
-    },
+    height: 500,
+    position: "absolute",
+    zIndex: 2,
+
     [theme.breakpoints.down("md")]: {
       height: 400,
     },
@@ -123,24 +137,24 @@ const useStyles = makeStyles((theme) => ({
       height: 300,
       width: "100%",
     },
-    position: "absolute",
-    zIndex: 3,
+    [theme.breakpoints.down("xs")]: {
+      height: 250,
+      width: "100%",
+    },
   },
   div1: {
-    [theme.breakpoints.up("md")]: {
-      maxWidth: 500,
-      padding: 50,
-      marginBottom: 250,
-    },
+    maxWidth: 500,
+    padding: 50,
+    marginBottom: 250,
+
     [theme.breakpoints.down("md")]: {
-      maxWidth: 500,
-      padding: 50,
-      marginBottom: 100,
+      textAlign: "center",
+      marginBottom: 70,
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       textAlign: "center",
       padding: 10,
-      width: "90%",
+      marginBottom: 40,
     },
   },
 
@@ -149,9 +163,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "40px",
     backgroundImage: "linear-gradient(to top,#1b5dbf,#23ffdb)",
     maxWidth: 130,
-    marginTop: 100,
+    marginTop: 80,
     textAlign: "center",
-    [theme.breakpoints.down("sm")]: {
+
+    [theme.breakpoints.down("md")]: {
+      margin: "auto",
+      marginTop: 50,
+      textAlign: "center",
+    },
+
+    [theme.breakpoints.down("xs")]: {
+      padding: "0.4rem 0.9rem",
+      marginTop: 20,
       margin: "auto",
     },
     "&:hover": {
@@ -163,6 +186,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontWeight: 200,
     fontSize: 16,
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15,
+    },
   },
 }));
 
@@ -178,7 +205,6 @@ export default function CenteredGrid() {
       { transform: "translateY(0px)" },
     ],
     timing: {
-      //   delay: 500,
       duration: 6000,
       iterations: Infinity,
       easing: "ease-in-out",

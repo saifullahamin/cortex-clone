@@ -15,94 +15,122 @@ const useStyles = makeStyles((theme) => ({
     background: "linear-gradient(to right, #570091, #7522b6);",
     paddingTop: 100,
     paddingBottom: 100,
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: 50,
+      paddingBottom: 50,
+    },
   },
   gridX: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      justifyContent: "flex-end",
-      width: "min-content",
-      padding: "10px",
-      paddingLeft: 30,
-    },
+    display: "flex",
+    justifyContent: "flex-end",
+    width: "min-content",
+    padding: "10px",
+    paddingLeft: 30,
+
     [theme.breakpoints.down("md")]: {
-      display: "flex",
       justifyContent: "center",
-      // width: "min-content",
-      padding: "10px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      padding: 10,
     },
   },
   gridY: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      justifyContent: "flex-start",
-      padding: "10px",
-      paddingRight: 30,
-    },
+    display: "flex",
+    justifyContent: "flex-start",
+    padding: "10px",
+    paddingRight: 30,
+
     [theme.breakpoints.down("md")]: {
-      display: "flex",
       justifyContent: "center",
-      padding: "10px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      padding: 10,
     },
   },
   main: {
-    display: "flex",
-    justifyContent: "flex-start",
-    transition: "0.5s ease-out",
-    boxShadow: "1px 16px 20px rgba(0, 0, 0, 0.17)",
     "&:hover": {
       transform: "scale(1.02)",
       cursor: "pointer",
     },
-    [theme.breakpoints.up("sm")]: {
+    backgroundColor: "rgb(242, 242, 242)",
+
+    [theme.breakpoints.up("xs")]: {
+      display: "flex",
+      justifyContent: "flex-start",
+      transition: "0.5s ease-out",
+      boxShadow: "1px 16px 20px rgba(0, 0, 0, 0.17)",
       width: 500,
     },
-    [theme.breakpoints.down("sm")]: {
+
+    [theme.breakpoints.down("xs")]: {
+      display: "block",
+      transition: "0.5s ease-out",
+      boxShadow: "1px 16px 20px rgba(0, 0, 0, 0.17)",
       width: "90%",
     },
   },
   images: {
-    [theme.breakpoints.up("md")]: {
-      width: 250,
-      backgroundColor: "rgb(153, 102, 255)",
-      display: "flex",
-    },
-    [theme.breakpoints.down("md")]: {
-      width: 250,
-      backgroundColor: "rgb(153, 102, 255)",
-      display: "flex",
+    width: 250,
+    backgroundColor: "rgb(153, 102, 255)",
+    display: "flex",
+
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
     },
   },
+  text: {
+    width: "70%",
+    padding: "10px 10px 30px 30px",
+    [theme.breakpoints.down("xs")]: {
+      width: "initial",
+      padding: "10px 10px 30px 30px",
+    },
+  },
+
   img: {
     width: "100%",
     margin: "auto",
     transform: "scale(0.9)",
+
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
+      padding: 10,
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "40%",
+      padding: 10,
+    },
   },
-  text: {
-    width: "70%",
-    backgroundColor: "rgb(242, 242, 242)",
-    padding: "10px 10px 30px 30px",
-  },
+
   name: {
     fontSize: 19,
     fontWeight: 300,
     marginBottom: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15,
+    },
   },
   desig: {
     fontSize: 13,
     fontWeight: 100,
     fontStyle: "italic",
     marginTop: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 10,
+    },
   },
   lines: {
-    [theme.breakpoints.up("md")]: {
-      fontSize: 25,
-      fontStyle: "italic",
-      fontWeight: 100,
-    },
+    fontSize: 25,
+    fontStyle: "italic",
+    fontWeight: 100,
+
     [theme.breakpoints.down("md")]: {
       fontSize: 20,
-      fontStyle: "italic",
-      fontWeight: 100,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 15,
     },
   },
   reviews: {
@@ -118,6 +146,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 70,
     paddingTop: 7,
     paddingBottom: 7,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 25,
+      paddingTop: 5,
+      paddingBottom: 5,
+      width: 130,
+      marginBottom: 40,
+    },
   },
 }));
 
