@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
+      width: "90%",
     },
   },
   gridLeft: {

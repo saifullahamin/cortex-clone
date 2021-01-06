@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       display: "flex",
       justifyContent: "center",
-      width: "min-content",
+      // width: "min-content",
       padding: "10px",
     },
   },
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
       width: 500,
     },
     [theme.breakpoints.down("sm")]: {
-      width: 400,
+      width: "90%",
     },
   },
   images: {

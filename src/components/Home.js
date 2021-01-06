@@ -50,12 +50,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     marginBottom: 0,
     marginTop: 0,
+    width: "100%",
   },
   heading2: {
     fontSize: 60,
     fontWeight: 300,
     marginTop: -25,
     marginBottom: 0,
+    width: "100%",
   },
   p1: {
     [theme.breakpoints.up("sm")]: {
@@ -137,8 +139,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
-      maxWidth: 450,
       padding: 10,
+      width: "90%",
     },
   },
 
